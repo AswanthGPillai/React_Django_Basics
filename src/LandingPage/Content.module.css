@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 70px;
+}
+
+.firstDiv {
+    margin-left: 145px;
+}
+
+.firstDivFirstChild{
+    margin-bottom: 30px;
+}
+
+.firstContent {
+    color: rgba(32, 32, 131, 0.888);
+    font-size: 60px;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.secondContent {
+    color: rgba(32, 32, 131, 0.888);
+    font-size: 25px;
+
+}
+
+.image {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}

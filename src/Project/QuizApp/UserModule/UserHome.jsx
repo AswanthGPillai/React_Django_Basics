@@ -5,7 +5,13 @@ const UserHome = () => {
     const navigate = useNavigate()
     const storage = JSON.parse(sessionStorage.getItem('user'))
 
-    const handleLogOut = () =>{
+    const handleLogOut = () => {
+        const userdata = {
+            ...storage,
+            login: false
+        }
+        JSON.stringify(sessionStorage.setItem('user', userdata))
+        alert(`Welcome to Quiz App, ${storage.name}`)
         navigate('/')
     }
 
@@ -21,9 +27,13 @@ const UserHome = () => {
                         Welcome {storage.name}
                     </span>
 
+
                     <div>
                         <Link to="/user" className="btn btn-light me-2">
                             Home
+                        </Link>
+                        <Link className="btn btn-outline-info me-2" to="/user/myprofile">
+                            My Profile
                         </Link>
                         <button className="btn btn-outline-danger" onClick={handleLogOut}>
                             Logout

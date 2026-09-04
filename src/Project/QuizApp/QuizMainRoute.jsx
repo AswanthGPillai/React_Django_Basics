@@ -8,6 +8,9 @@ import UserHome from './UserModule/UserHome'
 import QuizSection from './UserModule/QuizSection'
 import ProtectedRoute from './ProtectedRoute'
 import UserLandingPage from './UserModule/UserLandingPage'
+import MyProfile from './UserModule/MyProfile/MyProfile'
+import ChangePassword from './UserModule/MyProfile/ChangePassword'
+import EditProfile from './UserModule/MyProfile/EditProfile'
 
 const QuizMainRoute = () => {
     return (
@@ -21,6 +24,9 @@ const QuizMainRoute = () => {
                 <Route element={<ProtectedRoute />}>
                     <Route path="/user" element={<UserHome />}>
                         <Route index element={<UserLandingPage />} />
+                        <Route path='myprofile' element={<MyProfile />} />
+                        <Route path='changepassword' element={<ChangePassword />} />
+                        <Route path='editprofile' element={<EditProfile />} />
                         <Route path='quizsection' element={<QuizSection />} />
                     </Route>
                 </Route>

@@ -13,11 +13,14 @@ const Register = () => {
         const userData = {
             name: name,
             email: email,
-            password: password
+            password: password,
+            login:false,
         }
 
+        const user = JSON.stringify(userData)
+
         // setItem() takes 2 parameters:  sessionStorage.setItem(key, value)
-        sessionStorage.setItem('user', JSON.stringify(userData))
+        sessionStorage.setItem('user', user)
         alert(`${name}'s Register Successfully Done ....`)
         navigate('/login')
     }

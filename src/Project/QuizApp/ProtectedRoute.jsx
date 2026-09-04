@@ -3,7 +3,7 @@ import { Navigate, Outlet } from 'react-router'
 
 const ProtectedRoute = () => {
 
-    const user = sessionStorage.getItem('user')
+    const user = JSON.parse(sessionStorage.getItem('user'))
 
     if (!user) {
         /* 
@@ -26,7 +26,20 @@ the browser history can be:
 /user → /
 
 If the user presses the browser Back button, they may go back to /user, which immediately redirects to / again. */
-        return <Navigate to="/" replace />
+        alert("Please Register Your Account")
+        return <Navigate to="/register" replace />
+
+    } 
+    
+
+   
+    
+    if (user) {
+
+        user.login == false
+        alert("Please Login...")
+        return <Navigate to="/login" replace />
+
     }
 
     return <Outlet />

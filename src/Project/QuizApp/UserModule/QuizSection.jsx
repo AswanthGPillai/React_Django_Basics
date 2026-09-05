@@ -148,7 +148,7 @@ const QuizSection = () => {
                                 </button> */}
 
                                 <button className="btn btn-primary" onClick={nextQuestion} disabled={currentQuestion == questions.length - 1}>
-                                    Next
+                                    {currentQuestion == questions.length - 1 ? "Finished" : "Next"}
                                 </button>
 
                             </div>

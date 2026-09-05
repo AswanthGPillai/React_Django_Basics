@@ -32,6 +32,7 @@ import Products from './Axios/Products.jsx';
 import SetUp from './LazyLoading/SetUp.jsx';
 import LazyImages from './LazyLoading/LazyImages.jsx';
 import QuizMainRoute from './Project/QuizApp/QuizMainRoute.jsx';
+import LazyFifteen from './LazyLoading/LazyFifteen.jsx';
 // import HomePage from './HomePage.jsx'
 
 createRoot(document.getElementById('root')).render(
@@ -67,7 +68,8 @@ createRoot(document.getElementById('root')).render(
       {/* <Pagination/> */}
       {/* <SetUp/> */}
       {/* <LazyImages/> */}
-      <QuizMainRoute/>
+      {/* <QuizMainRoute/> */}
+      <LazyFifteen />
 
     </BrowserRouter>
 )

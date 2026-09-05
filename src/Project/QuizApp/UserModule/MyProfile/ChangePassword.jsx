@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router'
 
 const ChangePassword = () => {
 
@@ -7,6 +8,7 @@ const ChangePassword = () => {
     const [oldPassword,setOldPassword] = useState('')
     const [newPassword,setNewPassword] = useState('')
     const [confirmPassword,setConfirmPassword] = useState('')
+    const navigate = useNavigate()
 
     const handleSubmit = () =>{
         if(storage.password == oldPassword){
@@ -19,6 +21,7 @@ const ChangePassword = () => {
                 const user = JSON.stringify(userdata)
                 sessionStorage.setItem('user',user)
                 alert('Password Changed Successfully...')
+                navigate('/user/myprofile')
             }else{
                 alert('new Password and confirm Password Mismatch')
             }

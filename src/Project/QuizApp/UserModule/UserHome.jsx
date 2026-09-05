@@ -10,7 +10,7 @@ const UserHome = () => {
             ...storage,
             login: false
         }
-        JSON.stringify(sessionStorage.setItem('user', userdata))
+        sessionStorage.setItem('user', JSON.stringify(userdata))
         alert(`Welcome to Quiz App, ${storage.name}`)
         navigate('/')
     }

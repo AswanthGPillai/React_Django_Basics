@@ -15,12 +15,14 @@ const Login = () => {
 
             // getItem() takes 1 parameter:  sessionStorage.getItem(key)
             const storage = JSON.parse(sessionStorage.getItem('user'))
+            
             if (email == storage.email && password == storage.password) {
                 const userdata = {
                     ...storage,
                     login: true
                 }
-                JSON.stringify(sessionStorage.setItem('user', userdata))
+                const user = JSON.stringify(userdata)
+                sessionStorage.setItem('user', user)
                 alert(`Welcome to Quiz App, ${storage.name}`)
                 navigate('/user')
 
